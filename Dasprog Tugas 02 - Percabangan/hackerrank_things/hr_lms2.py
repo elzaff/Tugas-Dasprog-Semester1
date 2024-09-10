@@ -1,15 +1,14 @@
-# Membaca input
 N, C = map(int, input().split())
 
-# Menentukan pemenang berdasarkan posisi bola
-if N % 6 == 0:
+if N % 4 == 0:
     if C == 1:
-        print("Lala")
-    else:
-        print("Lili")
+      winner = 2
+    else: 
+        winner = 1
 else:
-    if C == 1:
-        print("Lala")
-    else:
-        print("Lili")
-#BINGUNGI POL SUMPAH  GAMUDENG
+    winner = C
+
+if winner == 1:
+    print("Lala")
+else:
+    print("Lili")
