@@ -20,6 +20,6 @@ print("CHARLIE")
 print(' '.join(item_beli))
 print("STORAGE")
 
-for item, quantity in barangtoko.items():
-    print(f"{item} {quantity}")           
+for item in barangtoko:
+    print(f"{item} {barangtoko[item]}")           
    
