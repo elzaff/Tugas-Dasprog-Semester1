@@ -10,28 +10,30 @@ for i in range(r):
         exit()
 
 gerak = input()
-if len(gerak) != m:
-    print("gerakanmu salah bung!")
-    exit()
 
 emas = peta[posisi[0]][posisi[1]]
 
 for g in gerak:
-    if g == 'U':
+    if g == 'U' and posisi[0] > 0:
         emas += 3
         posisi[0] -= 1
-    elif g == 'D':
+    elif g == 'D' and posisi[0] < r - 1:
         emas -= 2
         posisi[0] += 1
-    elif g == 'L':
+    elif g == 'L' and posisi[1] > 0:
         emas -= 2
         posisi[1] -= 1
-    elif g == 'R':
+    elif g == 'R' and posisi[1] < c - 1:
         emas += 3
         posisi[1] += 1
-    if posisi[0] < 0 or posisi[0] >= r or posisi[0] < 0 or posisi[0] >= c:
-        print("Gerakan keluar peta, tidak valid")
-        exit()
+    else:
+        break
+    
     emas += peta[posisi[0]][posisi[1]]
-print(f"total emas yang didapat adalah {emas}")
+    
+
+print(emas)   
+if len(gerak) != m:
+    print("gerakanmu salah bung!")
+    exit()
 
