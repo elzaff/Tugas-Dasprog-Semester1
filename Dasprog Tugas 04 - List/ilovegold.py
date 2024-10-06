@@ -14,6 +14,7 @@ gerak = input()
 emas = peta[posisi[0]][posisi[1]]
 
 for g in gerak:
+    peta[posisi[0]][posisi[1]] = 0
     if g == 'U' and posisi[0] > 0:
         emas += 3
         posisi[0] -= 1
@@ -28,7 +29,6 @@ for g in gerak:
         posisi[1] += 1
     else:
         break
-    
     emas += peta[posisi[0]][posisi[1]]
     
 
